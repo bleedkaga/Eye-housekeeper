@@ -1,0 +1,504 @@
+//移动端用
+/*html, body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}*/
+
+input,
+textarea,
+select {
+  outline: none;
+  resize: none;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button,
+li[item] {
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#root,
+#container {
+  width: 100%;
+  height: 100%;
+  line-height: 1.15;
+}
+
+.iPhoneXTop #root {
+  padding-top: 0.6rem;
+}
+
+.iosTop #root {
+  padding-top: 0.4rem;
+}
+
+.androidTop #root {
+  padding-top: 0;
+}
+
+input::placeholder,
+input::-webkit-input-placeholder,
+textarea::placeholder,
+textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.line {
+  width: 100%;
+  border-top: 0.02rem #f1f1f1 solid;
+  &.p30 {
+    margin: auto;
+    width: 6.9rem;
+  }
+}
+
+.placeholder {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #f1f1f1;
+}
+
+.none-date {
+  padding: 0.5rem 0.3rem;
+  color: #999999;
+  text-align: center;
+  font-size: 0.28rem;
+}
+
+.scroll-view {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-page {
+  position: relative;
+  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  &.p20 {
+    padding: 20px;
+  }
+}
+
+.suffix-close-input {
+  .ant-input-suffix >
+  span {
+    border: none;
+    background-color: transparent;
+    color: #aaaaaa;
+    cursor: pointer;
+  }
+}
+
+.ant-input,
+.ant-cascader-input.ant-input {
+  height: 30px;
+  font-size: 12px;
+}
+
+.ant-cascader-picker-label {
+  font-size: 12px;
+}
+
+.ant-cascader-menus {
+  font-size: 12px;
+}
+
+.footer-pagination-placeholder {
+  position: relative;
+  width: 100%;
+  height: 72px;
+}
+
+.footer-pagination {
+  padding: 20px 30px;
+  background-color: #ffffff;
+  text-align: right;
+}
+
+.ant-btn.ant-btn-gray {
+  border-color: #e5e5e5;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  color: #666666;
+}
+
+.ant-cascader-menu-item {
+  overflow: hidden;
+  max-width: 18em;
+  text-overflow: ellipsis;
+}
+
+.hide {
+  display: none !important;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.custom-add-modal {
+  .ant-modal-title {
+    color: #333333;
+  }
+  // ================== 对话框 发票详情 ===============================
+  .dialog-invoice-detail {
+    margin: 0 5px;
+    padding: 0 2px;
+    h3.title {
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+    ul li {
+      padding-top: 16px;
+      padding-right: 17px;
+      padding-bottom: 16px;
+      padding-left: 17px;
+      border-bottom: 1px solid #e5e5e5;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    ul {
+      padding-bottom: 40px;
+    }
+    .layout-left {
+      display: inline-block;
+      padding-right: 10px;
+      width: 60%;
+      vertical-align: top;
+    }
+    .column-pass {
+      padding-top: 16px;
+      width: 100%;
+    }
+    .step-next {
+      padding: 24px;
+      text-align: center;
+    }
+    .step-next-button {
+      width: 90px;
+      height: 34px;
+      line-height: 34px;
+    }
+    .submission-address-set {
+      display: inline-block;
+      margin-left: 9px;
+    }
+  }
+
+  .invoice-record-tabs {
+    margin: -22px;
+    .ant-tabs-nav .ant-tabs-tab {
+      padding: 19px 16px;
+    }
+    .ant-tabs-nav {
+      margin-left: 35px;
+    }
+    .dialog-invoice-detail {
+      padding: 0 24px;
+    }
+  }
+
+  // 纸质发票背景
+  .dialog-invoice-prview {
+    .invoice-bg {
+      background-image: url(./images/invoice-static.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // ================== 对话框 发票详情 END ===============================
+  // ================== 对话框 发票预览 ===================================
+  .dialog-invoice-prview {
+    position: relative;
+    padding: 0 32px;
+    .invoice-bg {
+      position: relative;
+      margin: 0 10px;
+      min-height: 400px;
+      max-height: 500px;
+    }
+    //提交发票前的发票预览要比申请记录的发票预览尺寸要大
+    .company-info-remarks {
+      position: absolute;
+      top: 304px;
+      left: 380px;
+      width: 261px;
+      font-size: 10px;
+    }
+    .invoice-bg.size-large {
+      height: 450px;
+      .company-info {
+        position: absolute;
+        top: 103px;
+        left: 143px;
+        font-size: 12px;
+        p {
+          margin-bottom: 2px;
+          line-height: 1.2;
+        }
+      }
+      .company-info-remarks {
+        position: absolute;
+        top: 344px;
+        left: 430px;
+        width: 261px;
+        font-size: 10px;
+      }
+      .company-info-2 {
+        position: absolute;
+        top: 334px;
+        left: 138px;
+        font-size: 12px;
+        p {
+          margin-bottom: 2px;
+          line-height: 1.2;
+        }
+      }
+      .company-info-3 {
+        position: absolute;
+        top: 313px;
+        left: 220px;
+        font-size: 12px;
+        p {
+          display: inline-block;
+          margin-bottom: 2px;
+          &:first-child {
+            width: 332px;
+          }
+        }
+      }
+      .company-info-4 {
+        position: absolute;
+        top: 190px;
+        left: 33px;
+        font-size: 12px;
+        .text-center {
+          text-align: center;
+        }
+      }
+    }
+    .btn-prev {
+      left: -32px;
+      &:after {
+        transform: rotateZ(-45deg) translateY(1px);
+      }
+    }
+    .btn-next {
+      right: -32px;
+      &:after {
+        transform: rotateZ(135deg) translateX(1px);
+      }
+    }
+    .btn-next,
+    .btn-prev {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        margin: auto;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        content: '';
+        cursor: pointer;
+      }
+    }
+    .carousel-horizontal {
+      display: inline-block;
+    }
+    .invoice-type-title {
+      position: absolute;
+      top: 7%;
+      z-index: 9;
+      width: 100%;
+      color: #892b03;
+      text-align: center;
+      font-size: 24px;
+    }
+    .company-info {
+      position: absolute;
+      top: 90px;
+      left: 119px;
+      font-size: 12px;
+      p {
+        margin-bottom: 2px;
+        line-height: 1.2;
+      }
+    }
+    .company-info-2 {
+      position: absolute;
+      top: 300px;
+      left: 120px;
+      font-size: 12px;
+      p {
+        margin-bottom: 2px;
+        line-height: 1.2;
+      }
+    }
+    .company-info-3 {
+      position: absolute;
+      top: 281px;
+      left: 194px;
+      font-size: 12px;
+      p {
+        display: inline-block;
+        margin-bottom: 2px;
+        &:first-child {
+          width: 300px;
+        }
+      }
+    }
+    .company-info-4 {
+      position: absolute;
+      top: 171px;
+      left: 33px;
+      font-size: 12px;
+      .text-center {
+        text-align: center;
+      }
+    }
+    .btn-group {
+      padding: 20px 0;
+      text-align: center;
+      button {
+        margin: 0 20px;
+        padding: 0 20px;
+      }
+    }
+    .invoice-count-state {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 52px;
+      padding: 0 10px;
+
+      justify-content: space-between;
+      .left >
+      * {
+        padding-right: 16px;
+      }
+      .right {
+        text-align: right;
+      }
+      .left,
+      .right {
+        width: 50%;
+      }
+    }
+    .status-1 {
+      color: #dfc5a1;
+    }
+    .status-2 {
+      color: #3db574;
+    }
+    .status-3 {
+      color: #ff5e60;
+    }
+    .pos-r {
+      position: relative;
+    }
+  }
+}
+
+// ================== 对话框 发票预览 END ===============================
+
+// === 纳税人设置样式 ===
+.set-taxpayer-modal {
+  .tips {
+    margin-top: 135px;
+    text-align: center;
+    font-size: 23px;
+  }
+  .set-button-group {
+    padding-top: 145px;
+    padding-bottom: 90px;
+    text-align: center;
+    button {
+      margin-right: 42px;
+      width: 127px;
+      height: 48px;
+    }
+    button:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.ant-affix{
+  z-index: 31 !important;
+}
+
+.ant-empty-image img{
+  display: inline-block;
+  width: auto;
+}
+
+// 合并表格
+.line-table{
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  margin:0 -16px;
+  text-align: center;
+  &:last-child{
+    border-bottom: none;
+  }
+  //.operation-tabline-inline{
+  //  display: flex;
+  //  justify-content:space-between;
+  //  align-items: center;
+  //  padding: 0 10px;
+  //}
+}

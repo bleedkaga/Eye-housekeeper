@@ -1,0 +1,318 @@
+.dashboard {
+  margin-bottom: 0;
+  &-title {
+    line-height: 83px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #333;
+    padding-top: 0;
+
+    .notice {
+      line-height: 1;
+      font-size: 12px;
+      padding-left: 70px;
+      padding-top: 3px;
+      .anticon {
+        color: var(--default-color);
+        font-size: 14px;
+        margin-right: 8px;
+      }
+      a {
+        color: var(--default-color);
+      }
+    }
+  }
+
+  .dashboard-top {
+
+    div.item {
+      height: 180px;
+      background-color: #fff;
+      border-radius: 4px;
+      .row {
+        padding: 10px;
+        height: 125px;
+      }
+    }
+
+    .t-title {
+      padding: 0 20px;
+      line-height: 54px;
+      border-bottom: 1px #e5e5e5 solid;
+      font-size: 15px;
+      .tag {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+
+    .t0 {
+      .tag{
+        background-color: #15AB81;
+      }
+
+      .number {
+        color: #333;
+        font-size: 42px;
+        text-align: center;
+      }
+
+      .change {
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+        span {
+          display: block;
+          text-align: center;
+          em {
+            margin-left: 6px;
+            color: #15AB81;
+          }
+          b {
+            font-weight: normal;
+            margin-left: 6px;
+            color: #FF4D4F;
+          }
+        }
+        > a {
+          display: inline-block;
+          margin-top: 24px;
+        }
+      }
+    }
+
+    .t1 {
+
+      .tag{
+        background-color: #FF9148;
+      }
+
+      .info0 {
+        text-align: center;
+        i {
+          font-size: 16px;
+          color: #15AB81;
+          position: relative;
+          top: -2px;
+        }
+        span {
+          font-size: 42px;
+          font-weight: bold;
+          color: #3C4FA0;
+        }
+        em {
+          width: 100px;
+          white-space: nowrap;
+          display: block;
+          margin-top: 25px;
+          font-size: 13px;
+          text-align: center;
+        }
+      }
+
+      .info1{
+        text-align: left;
+        padding-left: 10px;
+        font-size: 14px;
+        span{
+          display: block;
+          color: #333333;
+          font-weight: bold;
+        }
+
+        em{
+          margin-top: 18px;
+          display: block;
+          color: #666;
+        }
+      }
+
+    }
+
+    .t2{
+      .tag{
+        background-color: #6CC6FF;
+      }
+    }
+
+    .t4 {
+      text-align: center;
+      .item > span {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 44px;
+        i{
+          color: #0099E1;
+        }
+      }
+
+      button {
+        width: 140px;
+        height: 40px;
+        line-height: 38px;
+        display: block;
+        background-color: #4CC3FB;
+        border-color: #4CC3FB;
+        margin: auto;
+        font-size: 16px;
+        >span{
+          font-size: 13px;
+        }
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .center {
+    margin-top: 16px;
+    background-color: #fff;
+    border-radius: 3px;
+    height: 265px;
+    .center-title {
+      padding-left: 24px;
+      line-height: 1;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      font-size: 15px;
+      color: #333;
+      i {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--default-color);
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+    .center-menu {
+      a {
+        display: block;
+        margin: auto;
+        width: 107px;
+        text-align: center;
+        > i {
+          display: block;
+          -webkit-background-size: contain;
+          background-size: contain;
+          width: 107px;
+          height: 107px;
+        }
+        em {
+          color: #333;
+          font-size: 14px;
+          margin-top: 24px;
+          display: block;
+        }
+         .i0 {
+           background-image: url(./images/i0.png);
+         }
+         .i1 {
+           background-image: url(./images/i1.png);
+         }
+         .i2 {
+           background-image: url(./images/i2.png);
+         }
+         .i3 {
+           background-image: url(./images/i3.png);
+         }
+         .i4 {
+           background-image: url(./images/i4.png);
+         }
+         .i5 {
+           background-image: url(./images/i5_new.png);
+         }
+         .i6 {
+           background-image: url(./images/i6.png);
+         }
+
+        .u0 {
+          background-image: url(./images/u0.png);
+        }
+        .u1 {
+          background-image: url(./images/u1.png);
+        }
+        .u2 {
+          background-image: url(./images/u2.png);
+        }
+        .u3 {
+          background-image: url(./images/u3.png);
+        }
+      }
+    }
+  }
+
+  .block {
+    margin-top: 17px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 40px;
+    color: #333;
+
+     i {
+       display: block;
+       background-image: url(./images/b0.png);
+       background-size: contain;
+       width: 168px;
+       height: 147px;
+       margin: auto;
+     }
+
+     &.block2 i{
+       background-image: url(./images/b1.png);
+     }
+
+    &.block3 i {
+      background-image: url(./images/b2.png);
+    }
+
+    .text{
+      overflow: hidden;
+      text-align: center;
+    }
+    .t1 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+    .t2 {
+      font-size: 16px;
+      margin-top: 4px;
+      transform: scale(0.7);
+      transform-origin: left top;
+      white-space: nowrap;
+      color: #666;
+    }
+    .t3{
+      width: 100%;
+      font-size: 12px;
+      margin-top: 13px;
+      min-height: 75px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    button{
+      //2
+      margin-top: 5px;
+      height: 34px;
+      width: 90px;
+    }
+  }
+
+  .vip-tips {
+    font-size: 14px;
+    color: #CEA95D;
+    // 36 + 32
+    margin-top: 1px;
+    // 32 + 4
+    height: 36px;
+    em{
+      display: block;
+      margin-top: 4px;
+    }
+  }
+}

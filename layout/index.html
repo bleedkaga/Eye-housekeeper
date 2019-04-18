@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="cache-control" content="no-cache"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no,address=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+  <link rel="icon" type="image/x-icon" href="<%=htmlWebpackPlugin.options.staticPath%>/static/image/favicon.ico" />
+
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_599263_r7y20zh1c.css"/>
+
+  <script src="//at.alicdn.com/t/font_599263_r7y20zh1c.js"></script>
+
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.options.staticPath%>/static/styles/reset.min.css"/>
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <script>
+    if (!window.Set || !window.Map) {
+      document.write(unescape("%3Cscript src='https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.5.7/es5-shim.min.js,es5-shim/4.5.7/es5-sham.min.js,es6-shim/0.35.1/es6-sham.min.js,es6-shim/0.35.1/es6-shim.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+  </script>
+  <script>
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+    if (isIE) window.location.href = '/unsupported';
+  </script>
+</head>
+<body class="gsg-theme">
+<div id="root">
+  <div id="container"></div>
+</div>
+<link rel="stylesheet/less" type="text/css" href="<%=htmlWebpackPlugin.options.staticPath%>/static/styles/color.less" />
+<script>
+  window.less = {
+    async: false,
+    env: "production"
+  };
+</script>
+<script type="text/javascript" src="<%=htmlWebpackPlugin.options.staticPath%>/static/js/less-2.7.2.min.js"></script>
+</body>
+</html>

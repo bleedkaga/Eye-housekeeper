@@ -1,0 +1,399 @@
+.payment-modal {
+  .ant-modal-body {
+    padding: 20px 25px 50px !important;
+  }
+}
+
+.gsg-payment {
+  .alipay i:not(.anticon) {
+    background-image: url(./images/alipay.png);
+  }
+  .wx i:not(.anticon) {
+    background-image: url(./images/wx.png);
+  }
+  .pay i:not(.anticon) {
+    background-image: url(./images/pay.png);
+  }
+  .bank i:not(.anticon) {
+    background-image: url(./images/bank.png);
+  }
+}
+
+.payment-dialog-box {
+  width: 100%;
+  .payment-dialog-item {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    display: block;
+    height: 68px;
+    line-height: 69px;
+    border-bottom: 1px #e5e5e5 dashed;
+    text-align: left;
+
+    i {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      -webkit-background-size: contain;
+      background-size: contain;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+      margin-right: 25px;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &.anticon {
+        width: auto;
+        height: auto;
+        float: right;
+        display: block;
+        line-height: 69px;
+        background: none;
+        color: #666;
+        font-size: 13px;
+        top: 0;
+        margin-right: 0;
+      }
+    }
+
+    span {
+      display: inline-block;
+      color: #333;
+      font-size: 17px;
+      line-height: 1;
+    }
+
+    em {
+      color: #999;
+      font-size: 13px;
+      float: right;
+      margin-right: 30px;
+    }
+  }
+}
+
+.payment-input-money {
+  padding: 40px 0;
+  em {
+    white-space: nowrap;
+    display: block;
+    line-height: 30px;
+  }
+}
+
+.payment-input-blank {
+  .pib-right {
+    padding-left: 25px;
+    position: relative;
+    padding-bottom: 30px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 1px #e5e5e5 dashed;
+      height: 233px;
+    }
+
+    .t1 {
+      padding-top: 20px;
+      font-size: 13px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    .t2 {
+      font-size: 12px;
+      color: #333;
+      margin-top: 10px;
+      i {
+        color: #999;
+      }
+    }
+    .t3 {
+      margin-top: 25px;
+      color: #FFBE4D;
+      font-size: 12px;
+      + .t3 {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .pib-left {
+    padding-right: 25px;
+    padding-top: 60px;
+    em {
+      display: block;
+      width: 100%;
+      line-height: 30px;
+      text-align: right;
+    }
+
+    .ant-row {
+      + .ant-row {
+        margin-top: 20px;
+      }
+    }
+
+    .pib-left-btn {
+      margin: 44px auto auto;
+      width: 92px;
+      display: block;
+    }
+  }
+}
+
+.payment-wx-box {
+  img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: block;
+  }
+}
+
+.payment-bank-modal {
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+  .payment-bank-box {
+    .t1 {
+      padding: 40px;
+      padding-bottom: 0;
+      color: #333;
+      font-size: 17px;
+      text-align: center;
+
+      + button {
+        display: block;
+        width: 100px;
+        margin: 35px auto auto;
+      }
+    }
+
+    .t2 {
+      border-top: 1px #e5e5e5 dashed;
+      margin-top: 28px;
+      padding: 25px 40px;
+      font-size: 12px;
+      span {
+        display: block;
+        color: #FF4D4F;
+      }
+      em {
+        color: #666;
+        i {
+          color: #333;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.payment-block-main {
+  position: relative;
+
+  .payment-block-item {
+    position: relative;
+    margin: 0 8px;
+    width: 200px;
+    height: 95px;
+    line-height: 95px;
+    background-color: #fff;
+    border: 1px #E5E5E5 solid;
+    font-size: 15px;
+    color: #666;
+    i:not(.anticon){
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      -webkit-background-size: contain;
+      background-size: contain;
+      vertical-align: middle;
+      margin-right: 17px;
+      position: relative;
+      top: -2px;
+    }
+
+    em{
+      position: absolute;
+      display: none;
+      right: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      color: #ffffff;
+      text-align: center;
+      line-height: 17px;
+      font-size: 12px; // 已替换 12px
+      overflow: hidden;
+      &:before{
+        z-index: 1;
+        content: '';
+        background-color: #3C4FA0;
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        bottom: 25%;
+        left: 25%;
+        transform: rotate(-52deg);
+      }
+
+      .anticon{
+        z-index: 2;
+        position: relative;
+        transform: scale(0.8);
+        right: -4px;
+        top: -4px;
+      }
+    }
+
+    &.active{
+      border-color: #3C4FA0;
+      em{
+        display: block;
+      }
+    }
+  }
+
+  .payment-block2-item {
+    //cursor: pointer;
+    text-align: left;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 129px;
+    background-color: #fff;
+    border: none;
+    transition: all 233ms;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    + .payment-block2-item {
+      border-top: 1px #e5e5e5 solid;
+    }
+
+    &:hover, &.active {
+      z-index: 1;
+      box-shadow: 0 0 12px 0 rgba(103, 103, 103, 0.1);
+      border-top-color: transparent;
+      + .payment-block2-item {
+        border-top-color: transparent;
+      }
+    }
+
+    .box {
+      height: 100%;
+    }
+
+    .item {
+      width: 100%;
+      height: 50px;
+
+      b {
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin-right: 30px;
+        border: 1px #999999 solid;
+        border-radius: 50%;
+        position: relative;
+      }
+      i.pb2-icon {
+        display: block;
+        width: 56px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        &.alipay {
+          background-size: 80%;
+        }
+        &.bank {
+          background-size: 80%;
+        }
+      }
+      span {
+        display: block;
+        height: auto;
+        font-size: 20px;
+        color: #333;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-right: 12px;
+      }
+      i.biconfont {
+        background: none;
+        color: #32B16C;
+        font-size: 24px;
+        height: auto;
+      }
+      em {
+        margin-left: 6px;
+        display: inline-block;
+        padding: 1px 8px;
+        color: #32B16C;
+        border: 1px #32B16C solid;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    .time {
+      color: #999;
+      font-size: 14px;
+      margin-top: 20px;
+      padding-left: 50px;
+    }
+
+    .detail-money {
+      i {
+        background: none;
+        font-size: 14px;
+        color: #333;
+      }
+      span {
+        font-size: 30px;
+        color: #FD8636;
+        i {
+          font-size: 14px;
+          color: #FD8636;
+        }
+      }
+
+      em {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        color: #999;
+        margin-top: 8px;
+      }
+    }
+
+    &.active {
+      .item {
+        b {
+          border: 1px #32B16C solid;
+          &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            border-radius: 50%;
+            background-color: #32B16C;
+          }
+        }
+      }
+    }
+  }
+}

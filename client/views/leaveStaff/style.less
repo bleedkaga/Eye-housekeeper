@@ -1,0 +1,96 @@
+/*离职人员*/
+.leave-staff-container{
+  .clearfix:before,
+  .clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .clearfix {
+    zoom: 1;
+  }
+  .leave-staff-title{
+    height: 57px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    line-height: 57px;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  .content-box{
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  .base-search-box{
+
+  }
+  .leave-staff-form{
+    padding-top:20px;
+    padding-bottom:16px;
+    .ant-form-item label{
+      font-size:12px;
+    }
+    .cascader-primary{
+      width: 250px;
+      .ant-advanced-search-form .ant-select-selection--single{
+        height: 32px;
+      }
+      input{
+        padding-top:2px;
+        padding-bottom: 2px;
+      }
+    }
+    .condition-box {
+      position: relative;
+      margin-right: 15px;
+
+      .condition-input {
+        width: 300px;
+        padding-right: 70px;
+        position: relative;
+        input{
+          height: 32px;
+          border-radius: 3px 0 0 3px;
+          &:focus{
+            box-shadow: none;
+            outline: none;
+          }
+        }
+      }
+
+      .base-search-btn {
+        width: 70px;
+        height: 32px;
+        font-size: 12px;
+        text-align: center;
+        padding: 0;
+        position: absolute;
+        right: 1px;
+        top: 4px;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+
+  }
+  .leave-reason-box{
+    margin:0;
+    padding:0;
+    width:300px;
+    text-align: center;
+  }
+  .leave-reason-text{
+    color:#999999;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.ant-popover-inner-content{
+  .leave-reason-content{
+    width: 300px;
+  }
+
+}

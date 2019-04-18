@@ -1,0 +1,155 @@
+.login-layout-main {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  background: url(./images/bg.png) no-repeat center center;
+}
+
+.login-layout-box {
+  width: 1005px;
+  height: 568px;
+  background-image: url(./images/box.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  //transform: translate3d(-50%, -50%, 0);
+  margin-left: -502px;
+  margin-top: -284px;
+}
+
+.login-layout-reg {
+  position: absolute;
+  width: 240px;
+  height: 54px;
+  font-size: 16px;
+  border-radius: 27px;
+  top: 402px;
+  left: 132px;
+  border: 1px #fff solid;
+  background-color: transparent;
+  color: #fff;
+}
+
+.login-layout-content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 502px;
+
+}
+
+.login-layout-other {
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  font-size: 0;
+  line-height: 36px;
+
+  > a {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 14px;
+    color: #666666;
+    i {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-right: 6px;
+    }
+  }
+
+  .login-layout-ba i{
+    background-image: url(./images/ba.png);
+  }
+  .login-layout-gs i{
+    background-image: url(./images/gs.png);
+  }
+}
+
+.login-layout-org {
+  width: 100%;
+  text-align: center;
+  color: #999999;
+  font-size: 12px;
+
+  .row{
+    margin-top: 12px;
+    line-height: 20px;
+    > div{
+          text-align: left;
+        }
+  }
+  .login-layout-org-wrap{
+    width: 1169px;
+    margin: 0 auto;
+    height: 73px;
+    overflow: hidden;
+    .org-box1{
+      float: left;
+      width: 758px;
+      padding-top:14px;
+      padding-bottom:14px;
+      >div{
+        text-align: left;
+        width: 100%;
+      }
+
+    }
+
+      .org-head-title{
+        color:#666;
+      }
+    .org-box2{
+      float: left;
+      padding-top:14px;
+      padding-bottom:14px;
+      >div{
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+  i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -webkit-background-size: contain;
+    background-size: contain;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .i0{background-image: url(./images/company1.png);}
+  .i1{background-image: url(./images/company2.png);}
+  .i2{background-image: url(./images/company3.png);}
+  .i3{background-image: url(./images/company4.png);}
+  .i4{background-image: url(./images/company5.png);}
+  .i5{background-image: url(./images/company6.png);}
+
+  + .login-layout-other{
+    bottom: 0px;
+    border-top:1px solid #303030;
+  }
+}
+
+.login-layout-wrap {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  padding-bottom: 110px;
+
+  .login-layout-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    z-index: 1;
+    background-color: #1B1B1B;
+  }
+}

@@ -1,0 +1,167 @@
+.OperatorHeaderPandect{
+  width: 100%;
+  margin-bottom: 20px;
+  .promptTop{
+    width: 100%;
+    height: 52px;
+    background: rgba(255,245,230,1);
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(244,93,11,1);
+    line-height: 52px;
+    padding-left: 24px;
+  }
+  .promptBorder{
+    height: 30px;
+    line-height: 30px;
+    border:1px solid rgba(255,213,145,1)
+  }
+  .hasLRborder{
+    border-left: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    padding: 22px 30px;
+    padding-right: 0;
+  }
+  .operatorMiddle{
+    width: 100%;
+    height: 117px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    .searchBtnWrap{
+      min-width: 370px;
+      height: 29px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 42px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      .btnWrap{
+        width: 100%;
+        height: 29px;
+        .ant-btn{
+          height: 29px;
+        }
+        .search{
+          width: 225px;
+          height: 29px;
+        }
+        .downBtn{
+          width: 121px;
+          height: 29px;
+          margin-left: 17px;
+        }
+      }
+
+    }
+    .txtInfo{
+      min-width: 890px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      p{
+        font-size: 14px;
+        color: #333;
+        font-weight:400;
+        height: 18px;
+        margin: 0;
+      }
+      p:nth-child(1){
+        margin-right: 20px;
+        min-width: 301px;
+      }
+      p:nth-child(2) {
+        min-width: 440px;
+
+      }
+    }
+    .exportBtn{
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      .exportButton{
+        width: 150px;
+        height: 40px;
+      }
+    }
+  }
+  .detailBottom{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid #E5E5E5;
+    div{
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      padding: 14px 27px;
+      .leftIcon{
+        flex: 19;
+        width: 33px;
+        height: 33px;
+        padding: 0 !important;
+        .success_icon{
+          background: url("./image/tuoyuan.png") no-repeat center center;
+        }
+        .fail_icon{
+          background: url("./image/stop.png") no-repeat center center;
+        }
+        .service_icon{
+          background: url("./image/menu_o.png") no-repeat center center;
+        }
+        .bg_icon{
+          width: 33px;
+          height: 33px;
+          background-size: cover;
+          margin: 0;
+        }
+
+      }
+      .rightContent{
+        flex: 100;
+        width: 200px;
+        height: 43px;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: center;
+        padding: 0 !important;
+        p{
+          margin: 0;
+          width: 100%;
+        }
+        .top{
+          width: 100%;
+          height: 21px;
+          font-size:12px;
+          text-align: left;
+        }
+        .bottom{
+          width: 100%;
+          height: 21px;
+          font-size:16px;
+          font-weight: bold;
+          text-align: left;
+        }
+      }
+    }
+    .sendSuccess{
+      border-right: 1px solid #E5E5E5;
+    }
+    .sendFailt{
+      border-right: 1px solid #E5E5E5;
+      div{
+        color: #FF4D4F;
+      }
+    }
+  }
+}

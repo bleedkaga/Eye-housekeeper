@@ -1,0 +1,207 @@
+.home-header {
+  background-color: #fff;
+  height: 50px;
+  padding-left: 17px;
+  line-height: 50px;
+  color: #1B2535;
+}
+
+.home-scroll-view {
+  .scroll-content {
+    padding-top: 60px;
+  }
+}
+
+.top-menu-1 {
+  position: relative;
+  height: 117px;
+
+  background: linear-gradient(170deg, #4DBAFF, #579AFF);
+  box-shadow: 0px 3px 6px 0px rgba(159, 175, 198, 0.06);
+  border-radius: 8px;
+  padding-left: 42px;
+  padding-right: 42px;
+  > .row {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./images/p0.png");
+    background-position: right center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+
+  .folder-bg {
+    background-image: url(./images/m0.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+
+  .money {
+    padding-left: 20px;
+    span {
+      display: block;
+      font-size: 14px; // 已替换 13px
+      color: #fff;
+    }
+    em {
+      font-size: 27px;
+      color: #fff;
+      font-weight: bold;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .btns {
+    button {
+      display: block;
+      font-size: 13px;
+      line-height: 32px;
+      height: 32px;
+      padding: 0;
+      width: 108px;
+      white-space: nowrap;
+      color: #0EA1FE;
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(14, 161, 254, 1);
+      border-radius: 3px;
+      + button {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.folder-bg {
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  text-align: center;
+  .anticon {
+    color: #fff;
+    font-size: 28px;
+    vertical-align: top;
+    margin-top: 15px;
+  }
+}
+
+.top-menu-2 {
+  background: rgba(255, 183, 97, 1);
+  box-shadow: 0px 3px 5px 0px rgba(159, 175, 198, 0.06);
+  .folder-bg {
+    background-image: url(./images/m1.png);
+  }
+
+  &:before {
+    background-image: url("./images/p1.png");
+  }
+}
+
+.top-menu-3 {
+  background: rgba(98, 209, 170, 1);
+  box-shadow: 0px 3px 5px 0px rgba(159, 175, 198, 0.06);
+  .folder-bg {
+    background-image: url(./images/m2.png);
+  }
+
+  &:before {
+    background-image: url("./images/p2.png");
+  }
+}
+
+.home-block {
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 3px 5px 0px rgba(159, 175, 198, 0.12);
+  border-radius: 8px;
+  padding: 17px;
+}
+
+.home-title {
+  font-size: 15px;
+  color: #333;
+  padding: 8px 16px;
+  span {
+    color: #0EA1FE;
+    font-size: 14px; // 已替换 13px
+  }
+}
+
+.home-chart-menu {
+  font-size: 14px; // 已替换 12px
+  color: #333;
+  text-align: center;
+  margin-top: 23px;
+
+  button {
+    line-height: 26px;
+    height: 28px;
+    border-radius: 14px;
+    font-size: 14px; // 已替换 13px
+    margin-left: 17px;
+  }
+}
+
+.home-chart-desc {
+  margin-top: 44px;
+  text-align: center;
+  .t1 {
+    color: #666;
+    font-size: 14px; // 已替换 12px
+  }
+
+  .t2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(14, 161, 254, 1);
+    line-height: 54px;
+  }
+
+  .t3 {
+    font-size: 14px; // 已替换 12px
+    color: #15AB81;
+    font-weight: 400;
+    line-height: 33px;
+    i {
+      color: #999;
+    }
+  }
+
+}
+
+.home-sub-title {
+  padding: 8px 16px;
+  color: #666666;
+  font-size: 14px; // 已替换 12px
+  i {
+    color: #333;
+  }
+
+  em {
+    margin-left: 10px;
+  }
+
+  em.down {
+    color: #FF4D4F;
+  }
+
+  em.up {
+    color: #15AB81;
+  }
+
+  b {
+    font-weight: normal;
+    color: #999;
+    margin-left: 10px;
+  }
+}

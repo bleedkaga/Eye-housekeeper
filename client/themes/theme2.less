@@ -1,0 +1,187 @@
+//工会管理
+@c-blue: #ff6767;
+@c-blue2: #FE8888;
+@c-gray: #F5F5F5;
+@c-green: #32B16C;
+@c-red: #FF4D4F;
+@c-yellow: #FEAE22;
+@c-coffee: #CFA972;
+@c-purple: #5F7AEB;
+
+@c-border: #E5E5E5;
+@c-link: #1890FF;
+
+.gsg-theme2 {
+  --default-color: @c-blue;
+
+  a {
+    &.blue {
+      color: @c-blue;
+    }
+    &.gray {
+      color: @c-gray;
+    }
+    &.green {
+      color: @c-green;
+    }
+    &.red {
+      color: @c-red;
+    }
+    &.yellow {
+      color: @c-yellow;
+    }
+    &.coffee {
+      color: @c-coffee;
+    }
+    &.purple {
+      color: @c-purple;
+    }
+  }
+
+  button, .ant-btn {
+    &.ant-btn-blue {
+      color: #fff;
+      background-color: @c-blue;
+      border-color: @c-blue;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-blue2 {
+      color: #fff;
+      background-color: @c-blue2;
+      border-color: @c-blue2;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-green {
+      color: #fff;
+      background-color: @c-green;
+      border-color: @c-green;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-red {
+      color: #fff;
+      background-color: @c-red;
+      border-color: @c-red;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-yellow {
+      color: #fff;
+      background-color: @c-yellow;
+      border-color: @c-yellow;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-coffee {
+      color: #fff;
+      background-color: @c-coffee;
+      border-color: @c-coffee;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-purple {
+      color: #fff;
+      background-color: @c-purple;
+      border-color: @c-purple;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+
+  }
+
+  .layout-header {
+    background-color: @c-blue;
+    .tag {
+      border-left-color: @c-blue2;
+    }
+  }
+
+  .layout-content, .page-content-container {
+    background-color: @c-gray;
+  }
+
+  .ant-menu {
+    color: #333;
+
+    .anticon {
+      color: #999;
+    }
+  }
+
+  .cut-main {
+    .cut-btn {
+      &.active {
+        background-color: @c-blue;
+        color: #fff;
+      }
+    }
+  }
+
+  .ant-menu-item {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      border: 8px transparent solid;
+      border-right: 8px #fff solid;
+      width: 16px;
+      height: 16px;
+      transform: translate3d(16px, -50%, 0);
+      opacity: 0;
+      transition: all 0.1s 0.15s;
+    }
+    &:after {
+      display: none !important;
+    }
+    &.ant-menu-item-active {
+      color: #fff;
+      background-color: @c-blue;
+      &:before {
+        transform: translate3d(0, -50%, 0);
+        opacity: 1;
+      }
+      .anticon {
+        color: #fff;
+      }
+    }
+    &.ant-menu-item-selected {
+      color: #fff;
+      background-color: @c-blue !important;
+      &:before {
+        transform: translate3d(0, -50%, 0);
+        opacity: 1;
+      }
+      .anticon {
+        color: #fff;
+      }
+    }
+  }
+
+  .ant-menu-submenu {
+    &.ant-menu-submenu-active, .ant-menu-submenu-title:hover, &.ant-menu-submenu-open {
+      color: @c-blue;
+      .anticon {
+        color: @c-blue;
+      }
+    }
+  }
+
+   .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+   .ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+   .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+   .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+   .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+   .ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+   .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+   .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+   .ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow:before,
+   .ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow:after
+   {
+    background: -webkit-gradient(linear, left top, right top, from(@c-blue), to(@c-blue));
+    background: linear-gradient(to right, @c-blue, @c-blue);
+  }
+}

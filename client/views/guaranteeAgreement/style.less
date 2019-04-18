@@ -1,0 +1,281 @@
+
+.guaranteeAgreement{
+  width: 100%;
+  height: 100%;
+  .title{
+    position: relative;
+    margin-bottom: 7%;
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei-Bold;
+    font-weight: bold;
+    color: rgba(51,51,51,1);
+    text-align: center;
+    line-height: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e5e5;
+    .close_icon{
+      position: absolute;
+      top: 0;
+      right: 30px;
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      color: #666;
+    }
+    .close_icon:hover{
+      cursor: pointer;
+    }
+  }
+  .wrap{
+    margin: 0 auto;
+    width: 620px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    .first_line{
+      width: 100%;
+      height: 250px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      >div{
+        width: 300px;
+        height: 250px;
+        box-shadow: 0px 0px 8px 0px rgba(118,118,118,0.15);
+        div.title_icon{
+          margin: 24px auto 16px auto;
+          background: lightcoral;
+          width: 80px;
+          height: 62px;
+        }
+        p{
+          margin-bottom: 10px;
+          width: 100%;
+          height: 20px;
+          font-size: 18px;
+          font-weight: bold;
+          color: #333;
+          line-height: 20px;
+          text-align: center;
+        }
+        p.green_center_text{
+          margin-bottom: 19px;
+          width: 100%;
+          height: 14px;
+          font-size: 14px;
+          color: #32B16C;
+          text-align: center;
+          line-height: 14px;
+        }
+        .sub_btn{
+          margin: 0 auto 19px 35%;
+          width: 100px;
+          height: 34px;
+        }
+        .btn_ageed{
+          background: #fcb63c;
+          border-color: #fcb63c;
+        }
+        .guarantee_wrap{
+          margin: 0 auto 19px auto;
+          width: 120px;
+          height: 30px;
+          box-sizing: border-box;
+          border: 1px solid #32B16C;
+          border-radius: 2px;
+          overflow: hidden;
+          text-align: center;
+          span{
+            display: inline-block;
+            float: left;
+            font-size: 16px;
+            line-height: 29px;
+          }
+          span:nth-child(1) {
+            width: 38px;
+            height: 100%;
+            background-color: #fff;
+            color: #32b16c;
+            line-height: 30px;
+          }
+          span:nth-child(2) {
+            width: 80px;
+            height: 100%;
+            background-color: #32b16c;
+            color: #fff;
+          }
+        }
+        div.agreement_wrap{
+          width: 100%;
+          height: 14px;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          :global .ant-checkbox-checked .ant-checkbox-inner{
+            background-color: #32B16C !important;
+            border-color: #32B16C !important;
+          }
+          :global .ant-checkbox-wrapper:hover{
+            border-color: #32B16C !important;
+          }
+        }
+      }
+      .bank_agreement{
+        border-radius: 40px 40px 0px 40px;
+        background: url('./images/bank_bg_xieyi.png') no-repeat center center;
+        background-size: cover;
+        .title_icon{
+          background: url('./images/bank_pay_no_bg_icon.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+      .ali_agreement{
+        border-radius:40px 40px 40px 0px;
+        background: url('./images/ali_bg_xieyi.png') no-repeat center center;
+        background-size: cover;
+        .title_icon{
+          background: url('./images/ali_pay_no_bg_icon.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+    .seconds_line{
+      width: 100%;
+      height: 250px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      >div{
+        width: 300px;
+        height: 250px;
+        box-shadow: 0px 0px 8px 0px rgba(118,118,118,0.15);
+        div.title_icon{
+          margin: 24px auto 16px auto;
+          background: lightcoral;
+          width: 80px;
+          height: 62px;
+        }
+        p{
+          margin-bottom: 10px;
+          width: 100%;
+          height: 20px;
+          font-size: 18px;
+          font-weight: bold;
+          color: #333;
+          line-height: 20px;
+          text-align: center;
+        }
+        p.green_center_text{
+          margin-bottom: 19px;
+          width: 100%;
+          height: 14px;
+          font-size: 14px;
+          color: #32B16C;
+          text-align: center;
+          line-height: 14px;
+        }
+        .sub_btn{
+          margin: 0 auto 19px 35%;
+          width: 100px;
+          height: 34px;
+        }
+        .btn_ageed{
+          background: #fcb63c;
+          border-color: #fcb63c;
+        }
+        .guarantee_wrap{
+          margin: 0 auto 19px auto;
+          width: 120px;
+          height: 30px;
+          box-sizing: border-box;
+          border: 1px solid #32B16C;
+          border-radius: 2px;
+          overflow: hidden;
+          text-align: center;
+          span{
+            display: inline-block;
+            float: left;
+            font-size: 16px;
+            line-height: 29px;
+          }
+          span:nth-child(1) {
+            width: 38px;
+            height: 100%;
+            background-color: #fff;
+            color: #32b16c;
+            line-height: 30px;
+          }
+          span:nth-child(2) {
+            width: 80px;
+            height: 100%;
+            background-color: #32b16c;
+            color: #fff;
+          }
+        }
+        div.agreement_wrap{
+          width: 100%;
+          height: 14px;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          :global .ant-checkbox-checked .ant-checkbox-inner{
+            background-color: #32B16C !important;
+            border-color: #32B16C !important;
+          }
+          :global .ant-checkbox-wrapper:hover{
+            border-color: #32B16C !important;
+          }
+        }
+      }
+      .wx_agreement{
+        border-radius: 40px 0 40px 40px;
+        background: url('./images/wx_bg_xieyi.png') no-repeat center center;
+        background-size: cover;
+        .title_icon{
+          background: url('./images/wx_pay_icon.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+      .pay_agreement{
+        border-radius: 0px 40px 40px 40px;
+        background: url('./images/pay_bg_xieyi.png') no-repeat center center;
+        background-size: cover;
+        .title_icon{
+          background: url('./images/pay_pay_icon.png') no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+.modal_view{
+  width: 100%;
+  height: 536px;
+  overflow-y: scroll;
+}
+.modal_view_title{
+  margin-bottom: 20px;
+  width: 100%;
+  height: 24px;
+  font-size: 24px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(51,51,51,1);
+}
+.confirm_btn_wrap{
+  padding: 4px 0px;
+  width: 100%;
+  height: 48px;
+}
+.confirm_agreement{
+  margin: 0 362px !important;
+  min-width: 160px;
+  height: 40px;
+}

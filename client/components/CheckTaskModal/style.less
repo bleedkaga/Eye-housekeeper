@@ -1,0 +1,132 @@
+.select-modal-box.check-model-box {
+  .ladder {
+      margin-top: 17px;
+  }
+
+  .rel-content{
+    height: 322px;
+  }
+
+  .source{
+    margin-top: 15px;
+  }
+
+  .department-box{
+    margin-top: -8px;
+  }
+
+  .department-item{
+    display: block;
+    margin: 8px 0;
+    position: relative;
+    padding-right: 55px;
+    .tag{
+      position: absolute;
+      right: 5px;
+      top: 0;
+      color: var(--default-color);
+      &.disabled{
+        color: #999;
+      }
+    }
+  }
+
+  .content-box{
+    overflow: auto;
+    overflow-x: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    .content-item{
+      margin: 4px;
+    }
+
+    .content-item-title{
+      font-size: 14px;
+      color: #333;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      span{
+        cursor: pointer;
+        max-width: 360px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      a{
+        margin-left: 10px;
+      }
+    }
+
+    .content-item-box{
+      width: 100%;
+
+      .content-item-a{
+        float: left;
+        background-color: #fff;
+        padding: 10px 16px;
+        color: #3C4FA0;
+        margin-right: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        i{
+          font-size: 12px;
+          margin-left: 20px;
+          color: #BFBFBF;
+        }
+      }
+    }
+  }
+
+  .checkbox-main {
+    width: 100%;
+    margin-left: -16px;
+  }
+
+  .checkbox-box {
+    width: 100%;
+    padding-left: 16px;
+    .checkbox-box-temp{
+      background-color: #F8F8F8;
+    }
+
+    .temp {
+      margin-top: 12px;
+    }
+
+    .temp-line {
+      margin-top: 0;
+      display: inline-block;
+      .ant-checkbox-wrapper + span, .ant-checkbox + span{
+        display: inline-block;
+        max-width: 360px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: top;
+      }
+    }
+
+    .ant-checkbox-wrapper {
+      margin: 7px;
+    }
+  }
+
+  .father-box{
+    > span{
+      font-size: 12px;
+      cursor: pointer;
+      color: #999;
+      line-height: 35px;
+      display: block;
+    }
+
+    .ant-checkbox-wrapper + span, .ant-checkbox + span{
+      display: inline-block;
+      max-width: 360px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: top;
+    }
+  }
+}

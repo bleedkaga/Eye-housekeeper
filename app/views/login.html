@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="cache-control" content="no-cache"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no,address=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="/public/static/styles/reset.min.css"/>
+
+  <style>
+    body {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .back-ground {
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-image: url("/public/static/image/bj.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .main {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 600px;
+      height: 288px;
+      margin: auto;
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+
+    .main > .logo-content {
+      float: left;
+      width: 50%;
+      height: 100%;
+      background-color: rgb(11, 13, 70);
+      position: relative;
+    }
+
+    .logo-content .logo-box {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -52px;
+    }
+
+    .main > .logo-content .logo {
+      width: 80px;
+      height: 80px;
+      margin: auto;
+      background-image: url("/public/static/image/logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .main > .logo-content p {
+      margin-top: 15px;
+      line-height: 38px;
+      font-size: 20px;
+      color: #cdc28f;
+      text-align: center;
+    }
+
+    .main > .login, .main > .register {
+      float: right;
+      width: 50%;
+      height: 100%;
+      padding-top: 50px;
+      background-color: white;
+    }
+
+    .login > .row, .register > .row {
+      width: 80%;
+      height: 40px;
+      margin: 0 auto 24px auto;
+      border-radius: 20px;
+      border: 1px solid #eee;
+      overflow: hidden;
+    }
+
+    .login .row.last, .register .row.last {
+      margin-bottom: 0;
+    }
+
+    .main .row > input {
+      height: 100%;
+      padding: 8px 15px;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 14px;
+    }
+
+    .verify > button {
+      width: 100px;
+      background: #eddf9b;
+      border-left: 1px #E5E5E5 solid;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .tips {
+      width: 100%;
+      height: 36px;
+      text-align: center;
+      line-height: 32px;
+      font-size: 12px;
+      opacity: 0;
+    }
+
+
+    .submit {
+      display: block;
+      width: 80%;
+      height: 40px;
+      margin: auto;
+      background: #cdc28f;
+      border-radius: 20px;
+      color: #0c1249;
+      line-height: 32px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      bottom: 30px;
+      width: 100%;
+      text-align: center;
+      color: #cdc28f;
+      font-size: 12px;
+    }
+
+    .toast {
+      font-family: Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+      font-size: 14px;
+      font-variant: tabular-nums;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, .5);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      list-style: none;
+      border-radius: 4px;
+
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      max-width: 50%;
+
+      padding: 8px 15px;
+
+      border: 1px solid #ffe58f;
+      background-color: #fffbe6;
+      transition: transform ease .233s, opacity ease .233s;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+
+    .toast.hide {
+      transform: translate(-50%, -10px);
+      opacity: 0;
+    }
+
+    .reg {
+      color: #0c1249;
+      font-size: 12px;
+      margin-top: 10px;
+      position: relative;
+      display: inline-block;
+      padding: 0 8px;
+      line-height: 24px;
+    }
+
+    .reg:before, .reg:after {
+      content: '';
+      background-color: #0c1249;
+      width: 44px;
+      position: absolute;
+      left: -44px;
+      top: 50%;
+      height: 1px;
+    }
+
+    .reg:after {
+      right: -44px;
+      left: auto;
+    }
+
+    .main .register {
+      padding-top: 30px;
+    }
+
+    .register > .row {
+      height: 36px;
+      margin-bottom: 20px;
+    }
+
+    .main .register .row > input {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    button.code.disabled {
+      background-color: #e7e7e7;
+    }
+  </style>
+
+</head>
+<body>
+<div class="wrapper">
+  <!-- 背景图 -->
+  <div class="back-ground"></div>
+
+  <!-- toast -->
+  <div class="toast hide" id="toast"></div>
+
+  <!-- main -->
+  <div class="main">
+    <div class="logo-content">
+      <div class="logo-box">
+        <div class="logo"></div>
+        <p>固守融合商城渠道管理系统</p>
+      </div>
+    </div>
+    <form class="login" id="login-main">
+      <div class="phone row">
+        <input type="text" name="phone" placeholder="请输入手机号" class="col" id="phone">
+        <input type="password" name="password" style="display: none" value="goodsogood">
+      </div>
+
+      <div class="verify row last">
+        <input type="text" placeholder="请输入验证码" class="col" id="verifyCode">
+        <button class="code" id="sendCode">发送验证码</button>
+      </div>
+
+      <div class="tips"></div>
+
+      <button class="submit" id="submit">登录</button>
+      <a href="/register" class="reg">注册</a>
+    </form>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    由固守云工会GOODSOGOOD提供技术支持
+  </div>
+</div>
+
+<script>
+  // constance
+  var noPhoneNum = '手机号不能为空';
+  var noText = '请输入手机号和验证码';
+  var noToken = '正在从服务端获取验证信息... 请等待或者刷新页面';
+  var sendCodeSuccess = '验证码已经发送, 请查收';
+  var waitTime = '请稍后再试';
+  var local_user = 'ADMIN_LOCAL_USER';
+
+  // Timer
+  var toastTimer = null;
+  var seconds = 60;
+  var local_time = 'ADMIN_LOCAL_COUNT_TIME';
+
+  // 节点
+  var el = {
+    sendCode: document.getElementById('sendCode'),
+    toast: document.getElementById('toast'),
+    submit: document.getElementById('submit'),
+    phone: document.getElementById('phone'),
+    verifyCode: document.getElementById('verifyCode'),
+  };
+
+  // 数据
+  var data = {
+    isGetToken: false,
+    leaveTime: null,
+  };
+
+  // 操作
+  var actions = {
+    // 获取token
+    getToken: function () {
+      var now = Date.now();
+
+      Ajax.get(
+        '/api/login/getToken',
+        {timeStamp: now},
+        function (res) {
+          if (res.code === 0) data.isGetToken = true;
+        });
+    },
+    // 发送验证码
+    sendCode: function (e) {
+      e.preventDefault();
+      if (data.leaveTime) return actions.toast(waitTime);
+      if (!data.isGetToken) return actions.toast(noToken);
+
+      var phoneNum = el.phone.value;
+      phoneNum = phoneNum.trim();
+
+      if (!phoneNum) return actions.toast(noPhoneNum);
+
+      el.sendCode.innerText = '正在发送中...';
+      data.leaveTime = seconds;
+      Ajax.post('/api/login/sendVerifyCode', {phone: phoneNum}, function (res) {
+        if (res.code === 0) {
+          actions.toast(sendCodeSuccess);
+
+          window.localStorage[local_time] = Date.now() + (seconds * 1000);
+          actions.countDown(seconds);
+        } else {
+          el.sendCode.innerText = '重新发送';
+          data.leaveTime = null;
+        }
+      });
+
+    },
+
+    // 提交验证
+    submit: function (e) {
+      e.preventDefault();
+      var phone = el.phone.value;
+      var vfcode = el.verifyCode.value;
+      if (!phone || !vfcode) return actions.toast(noText);
+
+      Ajax.post('/api/login/submit', {phone: phone, vfcode: vfcode}, function (res) {
+        if (res.code === 0) {
+          window.location.href = '/home';
+        }
+      })
+    },
+
+    keydown: function (e) {
+      if (e.keyCode === 13) actions.submit(e);
+    },
+
+    // 倒计时
+    countDown: function (time) {
+      el.sendCode.innerText = time;
+
+      setTimeout(function () {
+        data.leaveTime = time - 1;
+
+        if (data.leaveTime <= 0) {
+          data.leaveTime = null;
+          el.sendCode.innerText = '重新发送';
+        } else {
+          actions.countDown(data.leaveTime);
+        }
+
+      }, 1000);
+    },
+
+    // 恢复时间
+    recoverTime: function () {
+      var now = Date.now();
+      var lastTime = window.localStorage[local_time];
+
+      if (lastTime && lastTime - now > 0) {
+        var time = parseInt((lastTime - now) / 1000, 10);
+        data.leaveTime = time;
+        actions.countDown(time);
+      }
+    },
+
+    // 提示小红字
+    // showTips: function (text) {
+    // el.tips.innerHTML = text;
+    // el.tips.className = 'tips show';
+
+    // tipsTimer && clearTimeout(tipsTimer);
+    // tipsTimer = setTimeout(function () {
+    //   el.tips.className = 'tips hide';
+    //   el.tips.innerHTML = '';
+    // }, 5000);
+    // },
+
+    // 提示toast
+    toast: function (text) {
+      if (el.toast.className === 'toast show') {
+        el.toast.className = 'toast hide';
+
+        toastTimer && clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          actions.toast(text);
+        }, 249);
+        return;
+      }
+
+      el.toast.innerHTML = text;
+      el.toast.className = 'toast show';
+
+      toastTimer && clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () {
+        el.toast.className = 'toast hide';
+      }, 6666);
+    }
+  };
+
+  var Ajax = {
+    get: function (url, data, fn) {
+      // XMLHttpRequest对象用于在后台与服务器交换数据
+      var xhr = new XMLHttpRequest();
+
+      var textArr = Object.keys(data).map(key => {
+        return key + '=' + data[key];
+      });
+
+      var searchText = textArr.length ? '?' + textArr.join('&') : '';
+
+      xhr.open('GET', url + searchText, true);
+      xhr.onreadystatechange = function () {
+        // readyState == 4说明请求已完成
+        if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) {
+          // 从服务器获得数据
+          var data = Ajax.setResponse(xhr.responseText);
+
+          fn.call(this, data);
+        }
+      };
+      xhr.send();
+    },
+    // datat应为'a=a1&b=b1'这种字符串格式，在jq里如果data为对象会自动将对象转成这种字符串格式
+    post: function (url, data, fn) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      // 添加http头，发送信息至服务器时内容编码类型
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 304)) {
+          var data = Ajax.setResponse(xhr.responseText);
+
+          fn.call(this, data);
+        }
+      };
+      var str = Object.keys(data).map(key => {
+        return key + '=' + data[key];
+      });
+      xhr.send(str.join('&'));
+    },
+
+    setResponse: function (text) {
+      var data;
+      try {
+        data = JSON.parse(text);
+      } catch (e) {
+        console.warn(e);
+        // data = {code: -1, message: '返回数据内容有误'};
+      }
+
+      if (data.code !== 0) {
+        actions.toast(data.message || data.msg)
+      }
+
+      return data;
+    }
+  };
+
+  el.sendCode.addEventListener('click', actions.sendCode);
+  el.submit.addEventListener('click', actions.submit);
+
+  window.addEventListener('load', actions.getToken);
+  window.addEventListener('load', actions.recoverTime);
+  window.addEventListener('keydown', actions.keydown);
+
+</script>
+
+</body>
+</html>

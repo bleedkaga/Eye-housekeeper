@@ -1,0 +1,440 @@
+// index-view
+.taxPlan{
+  .wrap{
+    width: 100%;
+    min-height: calc(100% - 141px);
+    background-color: #fff;
+  }
+  .ant-steps-item-icon{
+    font-size: 18px;
+  }
+  .tabPhaneDisable{
+    font-size: 13px;
+    font-family: MicrosoftYaHei-Bold;
+    font-weight: bold;
+    color: rgba(51,51,51,1);
+  }
+  .dot{
+    margin-right: 18px;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: #7ECEF4;
+    border-radius: 50%;
+    line-height: 9px;
+  }
+  .tabBarExtraContent{
+    color: #999;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-right: 30px;
+  }
+  .stepWrap{
+    margin: 20px auto 20px auto;
+    padding: 0 26px;
+    width: 100%;
+    height: 50px;
+    .stepWrap-bg{
+      padding: 9px 0;
+      width: 100%;
+      height: 50px;
+      background-color: #F5F5F8;
+      .stepsStyle{
+        margin: 0 auto;
+        width: 70%;
+      }
+    }
+
+  }
+
+  // header-view
+  .header-view{
+    margin-bottom: 16px;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/trail_bg.png) no-repeat center center;
+    background-size: cover;
+  }
+  .header-wrap{
+    width: 166px;
+    height: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .header-content{
+    margin-bottom: 23px;
+    width:166px;
+    height:26px;
+    font-size:26px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+  }
+  .header-btn-wrap{
+    width: 100%;
+    height: 29px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header-right-btn{
+    width:86px;
+    height:29px;
+    background:rgba(252,182,60,1) !important;
+    border-color: rgba(252,182,60,1) !important;
+    border-radius:3px;
+  }
+  // step1
+  .step1Wrap{
+    width: 600px;
+    margin: 40px auto;
+  }
+  .createSchemeBtn{
+    margin-top: 26px;
+    width: 90px;
+    height: 34px;
+  }
+  .btn {
+    display: inline-block;
+    background-color: var(--default-color);
+    color: #fff;
+    font-size: 13px;
+    padding: 9px 12px;
+    border-radius: 3px;
+  }
+  // step2
+  .step2-wrap{
+    width: 100%;
+    padding: 26px;
+    padding-top: 0;
+  }
+  .step2-affix-footer{
+    width: 100%;
+    height: 78px;
+    padding: 22px 35px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px -2px 9px 0px rgba(85,85,85,0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    >div{
+      font-family:MicrosoftYaHei;
+    }
+    >div:nth-child(1) {
+      flex: 2;
+      font-size: 14px;
+    }
+    >div:nth-child(2) {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  .step2-prev{
+    margin-right: 26px;
+    width: 120px;
+    height: 40px;
+  }
+  .spte2-confirm-btn{
+    min-width: 120px;
+    height: 40px;
+  }
+  .step2-font-weight{
+    color: #333333;
+    font-weight: bold;
+  }
+  .step2-thead{
+    width: 100%;
+    height: 54px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    border-right: 0;
+    background: #fafafa;
+    >div{
+      float: left;
+      padding: 16px;
+      box-sizing: border-box;
+      border-right: 1px solid #e8e8e8;
+    }
+  }
+  .step2-thead-item1{
+    width: 10%;//8.1%;
+  }
+  .step2-thead-item2{
+    width: 14%;//13.97%;
+  }
+  .step2-thead-item3{
+    width: 19%;//20.95%;
+  }
+  .step2-thead-item4{
+    width: 33%;//34.55%;
+  }
+  .step2-thead-item5{
+    width: 10%;//9.65%;
+  }
+  .step2-thead-item6{
+    width: 14%;// 12.77%;
+  }
+  .step2-person-info-nofull{
+    background: rgba(255,232,230,1);
+  }
+  // step3
+  .step3-wrap{
+    padding: 0 36px;
+    .step3-title{
+      width: 100%;
+      height: 69px;
+      font-size: 14px;
+      >div{
+        float: left;
+        width: 50%;
+        height: 69px;
+      }
+      .step3-title-left{
+        >p{
+          margin-bottom: 4px;
+        }
+        >p:nth-child(1) {
+          margin-top: 21px;
+        }
+        >p:nth-child(3) {
+          margin: 0;
+        }
+      }
+      .step3-title-right{
+        text-align: right;
+        line-height: 110px;
+      }
+    }
+    .step3-pay-content{
+      margin-top: 30px;
+      padding: 24px 36px;
+      width: 100%;
+      height: 610px;
+      border-radius:8px;
+      background:rgba(255,255,255,1);
+      box-shadow: 0px 0px 14px 0px rgba(103,103,103,0.12);
+      .pay-label{
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-family: MicrosoftYaHei-Bold;
+        font-weight: bold;
+        color: rgba(51,51,51,1);
+      }
+    }
+  }
+  // 底部按钮
+  .step3-btn-wrap{
+    padding: 20px 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0px -2px 12px 0px rgba(59,59,59,0.08);
+    .step3-btn-content-wrap{
+      margin: 0 auto;
+      width: 296px;
+      height: 40px;
+      .step3-btn{
+        width: 120px;
+        height: 40px;
+      }
+      .step3-btn:nth-child(1){
+        margin-right: 36px;
+      }
+    }
+  }
+}
+// step4
+.ESexecuteProgress{
+  margin: 15px auto 6px auto;
+  width:350px;
+  height:26px;
+  font-size:24px;
+  color: #333333;
+  font-family:MicrosoftYaHei;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:49px;
+  text-align: center;
+}
+.ESbtnwrap{
+  width: 100%;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .meKnowBtn{
+    width: 110px;
+    height: 34px;
+  }
+}
+.ESexecuteAnimationWrap{
+  width: 467px;
+  height: 178px;
+  margin: 0 auto 75px auto;
+  background-image: url('./images/executeAnimation.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ESsuccessInfo{
+  margin: 0 auto;
+  width:240px;
+  height:22px;
+  font-size:22px;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.ESfullModalContent{
+  margin-top: 75px;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+}
+.ESfullBtnWrap{
+  width: 100%;
+  margin-top: 71px;
+  margin-bottom: 64px;
+}
+.ESfullBtn{
+  width: 115px;
+  height: 36px;
+  margin-left: 178px;
+}
+.tabsModalWrap{
+  width: 330px;
+  height: 140px;
+  margin: 109px auto 80px auto;
+  .tabsTxt{
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    font-size: 20px;
+    color:rgba(51,51,51,1);
+    text-align: center;
+  }
+  .okBtnWrap{
+    margin: 80px auto 0 auto;
+    width: 240px;
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .okBtn{
+      width: 110px;
+      height: 34px;
+    }
+  }
+}
+
+.native-table-step3 {
+  width: 100%;
+  height: 226px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  td{
+    border-left: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+  }
+}
+.i-know-btn{
+  margin: 61px 14px auto 325px;
+  width: 90px;
+  height: 34px;
+}
+
+.label-tag{
+  margin-bottom: 22px;
+  width: 100%;
+  height: 22px;
+  font-size: 16px;
+  font-family: MicrosoftYaHei;
+  font-weight:400;
+  line-height: 22px;
+  color: rgba(51,51,51,1);
+  >*{
+    float: left;
+  }
+  .label-block{
+    display: inline-block;
+    margin-top: 2px;
+    width: 4px;
+    height: 18px;
+    background-color: #3C4FA0;
+  }
+  .label-title{
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 10px;
+    height: 18px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(51,51,51,1);
+    line-height: 18px;
+  }
+  .label-icon{
+    font-size: 22px;
+    color: #FFBE4D;
+    margin-left: 10px;
+  }
+
+}
+
+.payment-bank-modal {
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+  .payment-bank-box {
+    .t1 {
+      padding: 40px;
+      padding-bottom: 0;
+      color: #333;
+      font-size: 17px;
+      text-align: center;
+
+      + button {
+        display: block;
+        width: 100px;
+        margin: 35px auto auto;
+      }
+    }
+
+    .t2 {
+      border-top: 1px #e5e5e5 dashed;
+      margin-top: 28px;
+      padding: 25px 40px;
+      font-size: 12px;
+      span {
+        display: block;
+        color: #FF4D4F;
+      }
+      em {
+        color: #666;
+        i {
+          color: #333;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.tips-width{
+  .ant-tooltip-content{
+    .ant-tooltip-inner{
+      width: 450px !important;
+    }
+  }
+}

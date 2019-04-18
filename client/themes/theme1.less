@@ -1,0 +1,360 @@
+//单位管理
+@c-blue: #3C4FA0;
+@c-blue2: #485EBB;
+@c-gray: #F5F5F5;
+@c-green: #32B16C;
+@c-red: #FF4D4F;
+@c-yellow: #FEAE22;
+@c-coffee: #CFA972;
+@c-purple: #5F7AEB;
+
+@c-border: #E5E5E5;
+@c-link: #1890FF;
+
+body.gsg-theme {
+  color: #333;
+}
+
+.gsg-theme {
+  .w90 {
+    min-width: 90px !important;
+  }
+  .w120 {
+    min-width: 120px !important;
+  }
+  .h34 {
+    height: 34px !important;
+    line-height: 32px !important;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    //&:active {
+    //  opacity: 0.92;
+    //}
+    &.has-text {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .gsg-notification-error{
+    border: 1px #FF4D4F solid;
+    background-color: #FFF0F3;
+    transform: scale(0.9);
+    transform-origin: right top;
+  }
+
+  .ant-message-notice-content {
+    padding: 0;
+    max-width: 444px;
+    background: transparent;
+    border-radius: 0;
+
+    .ant-message-custom-content {
+      padding: 16px;
+    }
+
+    .ant-message-success {
+      border: 1px #32B16C solid;
+      background-color: #F0FBF5;
+    }
+
+    .ant-message-warning {
+      border: 1px #FBCB43 solid;
+      background-color: #FEFCE7;
+    }
+
+    .ant-message-info {
+      border: 1px #FC7500 solid;
+      background-color: #FFF6EF;
+      .anticon {
+        color: #FC7500;
+      }
+    }
+
+    .ant-message-error {
+      border: 1px #FF4D4F solid;
+      background-color: #FFF0F3;
+    }
+
+    .ant-message-loading {
+      border: 1px #f5f5f5 solid;
+      background-color: #fff;
+    }
+
+    .anticon {
+      //margin: 0;
+      font-size: 20px;
+    }
+    span {
+      color: #333;
+      font-size: 14px;
+      //display: block;
+    }
+  }
+
+  .ant-layout {
+    background-color: #f5f5f5 !important;
+  }
+
+  .ant-menu-inline {
+    border-right: none;
+  }
+
+  .ant-btn {
+    border-radius: 3px;
+    font-size: 13px;
+  }
+
+  .gsg-modal {
+    .gsg-modal-close {
+      position: absolute;
+      font-size: 17px;
+      background-color: transparent;
+      border: none;
+      color: #999;
+      top: 50%;
+      margin-top: -9px;
+      right: 25px;
+    }
+    &.ant-modal-confirm .ant-modal-body {
+      padding: 0;
+    }
+    .ant-modal-body {
+      padding: 30px;
+    }
+    .ant-modal-confirm-title {
+      font-size: 15px;
+      color: #333;
+      line-height: 1;
+      padding: 20px 25px;
+      border-bottom: 1px #E5E5E5 solid;
+      position: relative;
+    }
+    .ant-modal-confirm-content {
+      margin: 0;
+      padding: 30px;
+    }
+
+    .ant-modal-confirm-btns, .ant-modal-footer {
+      margin-top: 0;
+      padding-top: 0;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 30px;
+      border-top: 0;
+      button {
+        min-width: 92px;
+        + button {
+          margin-left: 20px;
+        }
+      }
+    }
+
+  }
+
+  .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title{
+    font-size: 13px;
+  }
+
+  .ant-table{
+    color: #333;
+  }
+
+  .ant-table-thead > tr > th{
+    background-color: #f8f8f8;
+    color: #666;
+  }
+
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+    padding: 14px;
+  }
+
+  .ant-message{
+    z-index: 2000;
+  }
+}
+
+.gsg-theme1 {
+  --default-color: @c-blue;
+
+  a {
+    &.blue {
+      color: @c-blue;
+    }
+    &.gray {
+      color: @c-gray;
+    }
+    &.green {
+      color: @c-green;
+    }
+    &.red {
+      color: @c-red;
+    }
+    &.yellow {
+      color: @c-yellow;
+    }
+    &.coffee {
+      color: @c-coffee;
+    }
+    &.purple {
+      color: @c-purple;
+    }
+  }
+
+  button, .ant-btn {
+    &.ant-btn-blue {
+      color: #fff;
+      background-color: @c-blue;
+      border-color: @c-blue;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-blue2 {
+      color: #fff;
+      background-color: @c-blue2;
+      border-color: @c-blue2;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-green {
+      color: #fff;
+      background-color: @c-green;
+      border-color: @c-green;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-red {
+      color: #fff;
+      background-color: @c-red;
+      border-color: @c-red;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-yellow {
+      color: #fff;
+      background-color: @c-yellow;
+      border-color: @c-yellow;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-coffee {
+      color: #fff;
+      background-color: @c-coffee;
+      border-color: @c-coffee;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+    &.ant-btn-purple {
+      color: #fff;
+      background-color: @c-purple;
+      border-color: @c-purple;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+    }
+
+  }
+
+  .layout-header {
+    background-color: @c-blue;
+    .tag {
+      border-left-color: @c-blue2;
+    }
+  }
+
+  .layout-content, .page-content-container {
+    background-color: @c-gray;
+  }
+
+  .ant-menu {
+    color: #333;
+
+    .anticon {
+      color: #999;
+    }
+  }
+
+  .cut-main {
+    .cut-btn {
+      &.active {
+        background-color: @c-blue;
+        color: #fff;
+      }
+    }
+  }
+
+  .ant-menu-item {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      border: 8px transparent solid;
+      border-right: 8px #fff solid;
+      width: 16px;
+      height: 16px;
+      transform: translate3d(16px, -50%, 0);
+      opacity: 0;
+      transition: all 0.1s 0.15s;
+    }
+    &:after {
+      display: none !important;
+    }
+    &.ant-menu-item-active {
+      color: #fff;
+      background-color: @c-blue;
+      &:before {
+        transform: translate3d(0, -50%, 0);
+        opacity: 1;
+      }
+      .anticon {
+        color: #fff;
+      }
+    }
+    &.ant-menu-item-selected {
+      color: #fff;
+      background-color: @c-blue !important;
+      &:before {
+        transform: translate3d(0, -50%, 0);
+        opacity: 1;
+      }
+      .anticon {
+        color: #fff;
+      }
+    }
+  }
+
+  .ant-menu-submenu {
+    &.ant-menu-submenu-active, .ant-menu-submenu-title:hover, &.ant-menu-submenu-open {
+      color: @c-blue;
+      .anticon {
+        color: @c-blue;
+      }
+    }
+  }
+
+  .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+  .ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+  .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+  .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+  .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+  .ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+  .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+  .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+  .ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow:before,
+  .ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow:after {
+    background: -webkit-gradient(linear, left top, right top, from(@c-blue), to(@c-blue));
+    background: linear-gradient(to right, @c-blue, @c-blue);
+  }
+}
+
+.ant-menu-inline {
+  border-right: none;
+}

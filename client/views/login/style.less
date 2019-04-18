@@ -1,0 +1,152 @@
+.login-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  padding: 85px 0 0 72px;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  .login-input {
+    width: 360px;
+    height: 90px;
+    margin: auto;
+    padding-top: 45px;
+    position: relative;
+    input {
+      border-width: 0;
+      border-bottom-width: 1px;
+      font-size: 16px;
+      box-shadow: none;
+      border-radius: 0;
+      height: 44px;
+      line-height: 44px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .ant-input,
+    .ant-input:focus,
+    .ant-input:hover,
+    .ant-input:active,
+    .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+      border-right-width: 0 !important;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .ant-form-explain {
+    width: 360px;
+    position: absolute;
+    left: 50%;
+    margin: auto auto auto -180px;
+    bottom: -21px;
+    height: 21px;
+  }
+
+  .login-play {
+    display: block;
+    width: 360px;
+    height: 54px;
+    border-radius: 27px !important;
+    margin: 30px auto auto;
+    font-size:16px !important;
+
+  }
+
+  .send-code-input {
+    .ant-input {
+      padding-right: 156px;
+    }
+    .ant-input-suffix {
+      right: 135px;
+    }
+  }
+
+  .send-code-btn {
+    position: absolute !important;
+    right: 0;
+    bottom: 8px;
+    z-index: 1;
+  }
+}
+
+a.login-forget {
+  font-size: 14px;
+  color: #999;
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  margin: 30px auto auto;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-select-org {
+  .ant-modal-content {
+    border-radius: 0;
+  }
+
+  .ant-modal-header {
+    border-bottom: 0;
+    padding: 0 26px;
+    .ant-modal-title {
+      height: 90px;
+      line-height: 90px;
+      font-size: 18px;
+      color: #666;
+    }
+  }
+  .ant-modal-body {
+    padding: 26px;
+    padding-top: 0;
+    padding-right: 0;
+
+    .content {
+      max-height: 469px;
+      width: 457px;
+      padding-right: 9px;
+      overflow: auto;
+      overflow-x: hidden;
+      &::-webkit-scrollbar-thumb {
+        background: #3C4FA0;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #EEF1FA;
+      }
+    }
+
+    .item {
+      border: 1px #E5E5E5 solid;
+      color: #999;
+      text-align: center;
+      font-size: 18px;
+      padding: 0 26px;
+      display: block;
+      background-color: transparent;
+      height: 80px;
+      width: 100%;
+      border-radius: 4px 8px 8px 8px;
+      overflow: hidden;
+      + .item {
+        margin-top: 30px;
+      }
+      &:hover, &.active {
+        background-color: #3C4FA0;
+        color: #fff;
+
+      }
+    }
+  }
+}
+

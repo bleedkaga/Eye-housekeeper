@@ -1,0 +1,298 @@
+// Apply invoices paper
+.apply-invoice-paper-panel{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:25px;
+	z-index:99;
+	height:100%;
+	border-radius:8px;
+	background:white;
+	box-shadow:2px 0 15px rgba(0, 10, 55, 0.3);
+
+	.header{
+		position:relative;
+		height:57px;
+		border-top-left-radius:8px;
+		border-top-right-radius:8px;
+		background:white;
+		text-align:center;
+		font-size:17px;
+		line-height:57px;
+	}
+	.bankname{
+		display:inline-block;
+		margin-right:29px;
+		padding-right:10px;
+		padding-left:10px;
+		min-width:200px;
+		max-width:400px;
+		height:31px;
+		border:1px solid #d9d9d9;
+		background:#ffffff;
+		vertical-align:top;
+		text-align:center;
+		line-height:30px;
+	}
+	.close{
+		position:absolute;
+		top:0;
+		right:24px;
+		font-size:17px;
+		cursor:pointer;
+	}
+	.invoice-container{
+		overflow-y:scroll;
+		margin:15px 28px;
+		height:calc(100vh - 270px);
+	}
+	.list-group{
+		margin-bottom:42px;
+	}
+	.invoice-table{
+		width:100%;
+		td{
+			padding:0;
+			border:1px solid rgba(166, 96, 28, 1);
+		}
+		th,
+		td{
+			margin:0;
+			padding:0;
+		}
+		.ant-select-selection{
+			background:#f1f1f1;
+		}
+		.invoice-title{
+			position:relative;
+			padding-top:4px;
+			padding-left:7px;
+			height:41px;
+			background:rgba(242, 242, 242, 1);
+			.ant-select-selection{
+				background:#ffffff;
+			}
+			.select1{
+				margin-right:14px;
+			}
+			.select2{
+				margin-right:18px;
+			}
+			.delete-single-invoice{
+				float:right;
+				margin-right:15px;
+			}
+		}
+		.ant-input,
+		.ant-input-number{
+			background:rgba(241, 241, 241, 1);
+		}
+	}
+	.label-title{
+		margin-top:13px;
+		margin-bottom:16px;
+		text-align:center;
+	}
+	.label-text{
+		padding:0 9px 7px;
+		min-height:32px;
+		text-align:center;
+		line-height:32px;
+	}
+	.btn-create-invoice{
+		margin-top:23px;
+		margin-bottom:23px;
+		height:53px;
+		border:2px dashed hsla(0, 0%, 90%, 1);
+		border-radius:3px;
+		color:rgba(60, 79, 160, 1);
+		text-align:center;
+		line-height:53px;
+		cursor:pointer;
+		span{
+			padding-left:15px;
+		}
+	}
+	.submit-bar{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		display:flex;
+		height:73px;
+		border-top:1px solid #e5e5e5;
+		border-bottom-right-radius:8px;
+		border-bottom-left-radius:8px;
+		background:white;
+
+		justify-content:space-between;
+		.invoice_detail{
+			padding-left:56px;
+			line-height:73px;
+			span{
+				margin-right:30px;
+			}
+		}
+		.btn-group{
+			margin-top:15px;
+			padding-right:83px;
+			button{
+				margin-left:23px;
+				width:120px;
+				height:40px;
+			}
+			button.btn-cancel{
+				background:#f2f2f2;
+			}
+		}
+	}
+}
+
+// ================== 对话框2 ======================
+.tab-modal{
+	.tab-modal-header{
+		margin-right:-24px;
+		margin-bottom:25px;
+		margin-left:-24px;
+		padding-right:35px;
+		padding-left:35px;
+		height:35px;
+		border-bottom:1px solid #e5e5e5;
+		span{
+			position:relative;
+			display:inline-block;
+			margin-right:41px;
+			color:#999999;
+			font-size:15px;
+			cursor:pointer;
+			&:after{
+				position:absolute;
+				left:50%;
+				bottom:-9px;
+				display:inline-block;
+				margin-left:-15px;
+				width:28px;
+				height:3px;
+				border-radius:3px;
+				background:transparent;
+				content:'';
+			}
+		}
+		span.active{
+			color:#3c4fa0;
+			&:after{
+				display:inline-block;
+				width:31px;
+				height:3px;
+				background:#3c4fa0;
+				content:'';
+			}
+		}
+	}
+	.hide{
+		display:none;
+	}
+	.show{
+		display:block;
+	}
+}
+
+// 设置纳税人类型
+.set-taxpayer-type{
+	margin:-24px;
+	.m-header{
+		border-bottom:1px solid #e5e5e5;
+	}
+	.m-step{
+		padding-left:17px;
+		height:100%;
+		line-height:58px;
+		.back{
+			display:inline-block;
+			height:100%;
+			cursor:pointer;
+			*{
+				cursor:pointer;
+			}
+		}
+		label{
+			padding-right:9px;
+			padding-left:9px;
+			border-right:1px solid #e5e5e5;
+		}
+		span:not(.back){
+			margin-right:10px;
+			margin-left:10px;
+			color:#333333;
+			font-weight:600;
+		}
+	}
+	.save{
+		margin-top:40px;
+		margin-bottom:40px;
+		width:69px;
+	}
+}
+
+.set-eaddress{
+	margin:-24px;
+	.m-header{
+		border-bottom:1px solid #e5e5e5;
+	}
+	.m-step{
+		padding-left:17px;
+		height:100%;
+		line-height:58px;
+		.back{
+			display:inline-block;
+			height:100%;
+			cursor:pointer;
+			*{
+				cursor:pointer;
+			}
+		}
+		label{
+			padding-right:9px;
+			padding-left:9px;
+			border-right:1px solid #e5e5e5;
+		}
+		span:not(.back){
+			margin-right:10px;
+			margin-left:10px;
+			color:#333333;
+			font-weight:600;
+		}
+	}
+	.save{
+		margin-top:40px;
+		margin-bottom:40px;
+		width:69px;
+	}
+	.ant-alert{
+		margin:8px 10px;
+	}
+	.ant-alert-warning{
+		margin-bottom:8px;
+		color:#fa541c;
+		font-size:12px;
+	}
+	.eaddress-container{
+		.ant-btn{
+			width:90px;
+			height:34px;
+		}
+	}
+	.btn-group{
+		padding:10px 0 60px;
+		text-align:center;
+		button{
+			margin:0 12px;
+		}
+	}
+}
+
+.ant-popover{
+	min-width:200px;
+	max-width:300px;
+}

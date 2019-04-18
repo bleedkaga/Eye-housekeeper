@@ -1,0 +1,167 @@
+
+// billing record
+.billing-record-panel{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:25px;
+	z-index:99;
+	height:100%;
+	border-radius:8px;
+  background:white;
+  box-shadow:2px 1px 15px rgba(0, 10, 55, 0.3);
+  .invoice-container .ant-table-thead > tr > th, 
+  .invoice-container .ant-table-tbody > tr > td{
+    padding: 5px 16px;
+  }
+	.header{
+		position:relative;
+		height:57px;
+		border-top-left-radius:8px;
+		border-top-right-radius:8px;
+		background:white;
+		text-align:center;
+		font-size:17px;
+		line-height:57px;
+	}
+	.bankname{
+		display:inline-block;
+		margin-right:29px;
+		width:300px;
+		height:31px;
+		border:1px solid #d9d9d9;
+		background:#ffffff;
+		text-align:center;
+		line-height:30px;
+	}
+	.close{
+		position:absolute;
+		top:0;
+		right:24px;
+		font-size:17px;
+		cursor:pointer;
+	}
+	.invoice-container{
+		margin:5px;
+		.table-container{
+			height:calc(100vh - 280px);
+			overflow-y:scroll;
+		}
+	}
+	.list-group{
+		margin-bottom:42px;
+	}
+	.status-1{
+		color:#dfc5a1;
+	}
+	.status-2{
+		color:#3db574;
+	}
+	.status-3{
+		color:#ff5e60;
+	}
+	.invoice-table{
+		width:100%;
+		td{
+			padding:0;
+			border:1px solid rgba(166, 96, 28, 1);
+		}
+		th,
+		td{
+			margin:0;
+			padding:0;
+		}
+		.ant-select-selection{
+			background:#f1f1f1;
+		}
+		.invoice-title{
+			position:relative;
+			padding-top:7px;
+			padding-left:7px;
+			height:43px;
+			background:rgba(242, 242, 242, 1);
+
+			.ant-select-selection{
+				background:#ffffff;
+			}
+			.select1{
+				margin-right:14px;
+			}
+			.select2{
+				margin-right:18px;
+			}
+			.delete-single-invoice{
+				float:right;
+				margin-right:15px;
+			}
+		}
+		.ant-input,
+		.ant-input-number{
+			background:rgba(241, 241, 241, 1);
+		}
+	}
+	.label-title{
+		margin-top:13px;
+		margin-bottom:16px;
+		text-align:center;
+	}
+	.label-text{
+		padding:0 9px 7px;
+		min-height:32px;
+		text-align:center;
+		line-height:32px;
+	}
+
+	.btn-create-invoice{
+		margin-top:23px;
+		margin-bottom:23px;
+		height:53px;
+		border:2px dashed hsla(0, 0%, 90%, 1);
+		border-radius:3px;
+		color:rgba(60, 79, 160, 1);
+		text-align:center;
+		line-height:53px;
+		cursor:pointer;
+		span{
+			padding-left:15px;
+		}
+	}
+
+	.submit-bar{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		display:flex;
+		height:73px;
+		border-top:1px solid #e5e5e5;
+		border-bottom-right-radius:8px;
+		border-bottom-left-radius:8px;
+		background:white;
+
+		justify-content:space-between;
+		.invoice_detail{
+			padding-left:56px;
+			line-height:73px;
+			span{
+				margin-right:30px;
+			}
+		}
+		.btn-group{
+			margin-top:15px;
+			padding-right:83px;
+			button{
+				margin-left:23px;
+				width:125px;
+				height:40px;
+			}
+			button.btn-cancel{
+				background:#f2f2f2;
+			}
+		}
+	}
+}
+.hide{
+	display:none;
+}

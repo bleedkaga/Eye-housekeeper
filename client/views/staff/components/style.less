@@ -1,0 +1,151 @@
+.ant-advanced-search-form {
+  .clearfix:before,
+  .clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .clearfix {
+    zoom: 1;
+  }
+  .ant-form-item-label{
+    label{
+      font-size:12px;
+    }
+  }
+
+  // border: 1px solid #d9d9d9;
+  // border-radius: 6px;
+  .primary-input {
+    width: 215px;
+  }
+
+  .ant-calendar-picker-input {
+    width: 215px;
+  }
+
+  .search-more {
+    background: #F8F8F8;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .handness{
+      &:hover{
+        cursor:pointer;
+      }
+    }
+  }
+
+  .ant-select {
+    width: 215px;
+  }
+
+  .ant-select-selection--single {
+    .ant-select-selection__rendered {
+      margin-right: 0;
+    }
+  }
+  .ant-form-item-label label:after {
+    margin: 0px 11px 0 2px;
+  }
+
+
+  .leave-link {
+    font-size: 12px;
+    text-decoration: underline;
+    margin-right: 15px;
+  }
+
+  .search-more-btn {
+    width: 90px;
+    height: 32px;
+    font-size: 12px;
+    margin-right: 15px;
+
+
+    i {
+      transform: scale(0.66);
+      margin-left: 0;
+    }
+  }
+
+
+
+  .base-search-box {
+    padding-top: 27px;
+
+    .select-more-depart {
+      float: left;
+
+      .cascader-primary {
+        width: 250px;
+        .ant-advanced-search-form .ant-select-selection--single{
+          height: 32px;
+        }
+        input{
+
+          padding-top:2px;
+          padding-bottom: 2px;
+        }
+      }
+    }
+
+    .base-search-btn-item {
+      float: right;
+    }
+    .base-search-more-btn{
+      width:90px;
+      height: 32px;
+      font-size:12px;
+      border:1px solid #E5E5E5;
+      background: #F2F2F2;
+      i{
+        transform: scale(0.66);
+        margin-left: 0
+      }
+    }
+  }
+
+  .condition-box {
+    position: relative;
+    margin-right: 15px;
+
+    .condition-input {
+      width: 300px;
+      padding-right: 70px;
+      position: relative;
+      input{
+        height: 32px;
+        border-radius: 3px 0 0 3px;
+        &:focus{
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+
+    .base-search-btn {
+      width: 70px;
+      height: 32px;
+      font-size: 12px;
+      text-align: center;
+      padding: 0;
+      position: absolute;
+      right: 1px;
+      top: 4px;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  .ant-checkbox-group span{
+    font-size: 12px;
+  }
+}
+
+.ant-advanced-search-form .ant-form-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}

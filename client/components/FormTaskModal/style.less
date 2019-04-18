@@ -1,0 +1,50 @@
+.task-edit-modal {
+  .task-label {
+    text-align: right;
+    padding-right: 5px;
+    width: 176px;
+  }
+  .father-box {
+    padding: 10px 108px 20px 30px;
+    background-color: #fff;
+  }
+
+  .ant-form-item{
+    margin-bottom: 0;
+  }
+
+  .children-box {
+    padding: 30px 108px 30px 30px;
+    background-color: #F8F8F8;
+    max-height: 500px;
+    overflow: auto;
+
+    .ant-form-item + .ant-form-item{
+      margin-top: 16px;
+    }
+  }
+
+  .task-operate {
+    margin-left: 16px;
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 25px;
+      color: #ccc;
+      transition: color 233ms;
+      &:hover {
+        color: #1890FF;
+      }
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        &:hover {
+          color: #ccc;
+        }
+      }
+      + button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
